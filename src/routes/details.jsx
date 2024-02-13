@@ -41,8 +41,8 @@ export default function Details() {
   }, [blog]);
 
   return (
-    <div class="container">
-      <div class="jumbotron py-5">
+    <div className="container">
+      <div className="jumbotron py-5">
         <h1>Blog Details</h1>
       </div>
 
@@ -53,7 +53,7 @@ export default function Details() {
         >
           <div className="col-12">
             <div className="d-flex justify-content-center">
-              <div class="spinner-border m-auto" role="status"></div>
+              <div className="spinner-border m-auto" role="status"></div>
             </div>
           </div>
         </div>
@@ -73,7 +73,7 @@ export default function Details() {
         </div>
       )}
 
-      <div class="jumbotron pt-5 mt-5 pb-4">
+      <div className="jumbotron pt-5 mt-5 pb-4">
         <h4>Comments</h4>
       </div>
 
@@ -81,7 +81,7 @@ export default function Details() {
         <div className="row gap-4 pb-5">
           <div className="col-12">
             <div className="d-flex justify-content-center">
-              <div class="spinner-border m-auto" role="status"></div>
+              <div className="spinner-border m-auto" role="status"></div>
             </div>
           </div>
         </div>
@@ -89,9 +89,13 @@ export default function Details() {
 
       {blogComments?.length > 0 && (
         <div className="row gap-4 pb-5">
-          {blogComments.map((comment) => {
+          {blogComments.map((comment, index) => {
             return (
-              <div className="col-12" style={{ backgroundColor: "#F4F4F4" }}>
+              <div
+                className="col-12"
+                key={index}
+                style={{ backgroundColor: "#F4F4F4" }}
+              >
                 <div className="row gap-4 p-5">
                   <div className="col-12">Name: {comment?.name}</div>
                   <div className="col-12">Email: {comment?.email}</div>

@@ -18,7 +18,7 @@ const BlogCard = ({ blog, loading = false }) => {
           )}
           {loading && (
             <div className="d-flex justify-content-center h-100 w-100 overflow-hidden">
-              <div class="spinner-border m-auto" role="status"></div>
+              <div className="spinner-border m-auto" role="status"></div>
             </div>
           )}
         </div>

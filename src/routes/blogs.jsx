@@ -22,8 +22,8 @@ const Blogs = () => {
   }, []);
 
   return (
-    <div class="container">
-      <div class="jumbotron py-5">
+    <div className="container">
+      <div className="jumbotron py-5">
         <h1>Blogs</h1>
       </div>
       <div className="row gap-4 pb-5">
